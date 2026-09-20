@@ -12,14 +12,16 @@
 <body>
 
 <header>
-    <a href="index.html" class="logo">PBUD</a>
+   <header id="site-header"></header>
 
-    <nav>
-        <a href="index.html">Pagrindinis</a>
-        <a href="comics.html">Komiksai</a>
-        <a href="artwork.html">Kūryba</a>
-    </nav>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('site-header').innerHTML = data);
+</script>
 </header>
+
+
 
 <main>
 
