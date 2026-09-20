@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 25px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #111111;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 60px 30px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+
+/* LANDING */
+
+.intro {
+    max-width: 650px;
+    margin-bottom: 120px;
+}
+
+.intro h1 {
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 20px;
+}
+
+
+.newsletter,
+.support {
+    max-width: 600px;
+    margin-bottom: 100px;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #cccccc;
+    font-size: 16px;
+}
+
+button,
+.button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: #111111;
+    color: white;
+
+    border: none;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #444444;
+}
+
+
+/* COMICS */
+
+.comic {
+    margin-bottom: 120px;
+}
+
+.comic-intro {
+    display: grid;
+
+    grid-template-columns: minmax(250px, 450px) 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+
+    margin-bottom: 60px;
+}
+
+.comic-cover {
+    width: 100%;
+    display: block;
+}
+
+.comic-info {
+    padding-top: 10px;
+}
+
+.comic-info h2 {
+    margin-top: 0;
+}
+
+.comic-pages {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.comic-pages img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ARTWORK */
+
+.artwork-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.artwork-thumbnail {
+    width: 100%;
+    display: block;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s;
+}
+
+.artwork-thumbnail:hover {
+    opacity: 0.8;
+}
+
+
+/* FOOTER */
+
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 40px 30px;
+
+    color: #777777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+
+    .comic-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .comic-pages {
+        grid-template-columns: 1fr;
+    }
+
+    .artwork-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+}
