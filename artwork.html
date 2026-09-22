@@ -1,42 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Artwork — PBUD</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kūryba - Petras Budrys</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-<div id="site-header"></div>
+  <!-- Shared Header Container -->
+  <div id="header-placeholder"></div>
 
-<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('site-header').innerHTML = data);
-</script>
-</header>
+  <main class="content-container">
+    
+    <!-- Section 1: Tapyba -->
+    <section class="work-section">
+      <h2 class="section-title">Tapyba</h2>
+      <div class="image-grid">
+        <img src="images/tapyba1.jpg" alt="Tapybos darbas 1" loading="lazy">
+        <img src="images/tapyba2.jpg" alt="Tapybos darbas 2" loading="lazy">
+        <img src="images/tapyba3.jpg" alt="Tapybos darbas 3" loading="lazy">
+      </div>
+    </section>
 
+    <!-- Section 2: Piešiniai -->
+    <section class="work-section">
+      <h2 class="section-title">Piešiniai</h2>
+      <div class="image-grid">
+        <img src="images/piesinys1.jpg" alt="Piešinys 1" loading="lazy">
+        <img src="images/piesinys2.jpg" alt="Piešinys 2" loading="lazy">
+      </div>
+    </section>
 
+  </main>
 
-<main>
-
-    <h1>Kūryba</h1>
-
-    <div class="artwork-grid">
-    <img src="art1.jpg" alt="Artwork 1" class="artwork-thumbnail">
-    <img src="art2.jpg" alt="Artwork 2" class="artwork-thumbnail">
-</div>
-
-</main>
-
-<footer>
-    © 2026 PBUD
-</footer>
-
+  <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
