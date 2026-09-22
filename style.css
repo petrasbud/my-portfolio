@@ -232,3 +232,39 @@ footer {
     }
 
 }
+/* Layout Container */
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Spacing */
+.work-section {
+  margin-bottom: 50px;
+}
+
+/* Category Titles */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee; /* Clean subtle dividing line */
+  padding-bottom: 8px;
+}
+
+/* Responsive Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Image Styling */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px; /* Optional subtle rounded corners */
+}
