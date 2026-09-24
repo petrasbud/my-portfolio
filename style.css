@@ -15,11 +15,12 @@ body {
 }
 
 
-/* HEADER */
+/* HEADER (FIXED: Targets header tag directly) */
 
-/* HEADER */
-
-#site-header {
+header,
+#site-header,
+.site-header {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 25px 30px;
@@ -27,15 +28,18 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     color: #111111;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 nav {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 nav a {
@@ -48,17 +52,18 @@ nav a:hover {
 }
 
 
-/* MAIN */
+/* MAIN & CONTAINERS */
 
-main {
+main,
+.content-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 40px 30px;
 }
 
 h1 {
     font-size: 42px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 h2 {
@@ -159,17 +164,34 @@ button:hover,
 }
 
 
-/* ARTWORK */
+/* ARTWORK / KŪRYBA */
 
+.work-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.image-grid,
 .artwork-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
+.image-grid img,
 .artwork-thumbnail {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     display: block;
+    border-radius: 4px;
     cursor: pointer;
     transition: opacity 0.2s;
 }
@@ -189,11 +211,13 @@ footer {
 }
 
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 700px) {
 
-    header {
+    header,
+    #site-header,
+    .site-header {
         padding: 20px;
         flex-direction: column;
         gap: 15px;
@@ -204,7 +228,8 @@ footer {
         gap: 15px;
     }
 
-    main {
+    main,
+    .content-container {
         padding: 40px 20px;
     }
 
@@ -222,49 +247,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .image-grid,
     .artwork-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
     }
 
     .newsletter-form {
         flex-direction: column;
     }
 
-}
-/* Layout Container */
-.content-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Section Spacing */
-.work-section {
-  margin-bottom: 50px;
-}
-
-/* Category Titles */
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee; /* Clean subtle dividing line */
-  padding-bottom: 8px;
-}
-
-/* Responsive Image Grid */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-/* Image Styling */
-.image-grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  border-radius: 4px; /* Optional subtle rounded corners */
 }
