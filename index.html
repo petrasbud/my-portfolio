@@ -1,82 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petras Budrys</title>
+<meta name="description" content="Komiksai, iliustracijos ir kūryba. P.B.">
 
-    <title>Petras Budrys</title>
-    <meta name="description" content="Komiksai, iliustracijos ir kūryba. P.B.">
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
+</head> <body>
 <header>
-<div id="site-header"></div>
-
-<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('site-header').innerHTML = data);
-</script>
+    <div id="site-header"></div>
 </header>
-
 
 <main>
 
     <section class="intro">
-
         <h1>Sveiki!</h1>
 
         <p>
             Komiksai, iliustracijos, piešiniai, tapyba
-            
         </p>
 
-
         <p>
-Kontaktai: info@petrasbudrys.lt
-</p>
-
-        
+            Kontaktai:
+            <a href="mailto:info@petrasbudrys.lt">
+                info@petrasbudrys.lt
+            </a>
+        </p>
     </section>
 
 
     <section class="newsletter">
-
         <h2>Naujienlaiškis</h2>
 
         <p>
             Kur, kada ir kokie nauji komiksai, parodos ar kūrybinės naujienos:
         </p>
 
-        <!-- KIT FORM GOES HERE -->
-          
-<script async data-uid="27731d3c78" src="https://petras-budrys.kit.com/27731d3c78/index.js"></script>
-       
-
+        <!-- KIT FORM -->
+        <script
+            async
+            data-uid="27731d3c78"
+            src="https://petras-budrys.kit.com/27731d3c78/index.js">
+        </script>
     </section>
-   <section class="support">
-  <h2>Palaikyk per Ko-fi</h2>
-  <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Palikyk per Ko-fi', '#000000', 'J1F627LL77');kofiwidget2.draw();</script> 
 
-  <div class="kofi-embed-wrapper">
-    <iframe 
-      id="kofiframe" 
-      src="https://ko-fi.com/petrasbudrys/?hidefeed=true&widget=true&embed=true&preview=true" 
-      style="border: none; width: 100%; background: transparent;" 
-      height="712" 
-      title="petrasbudrys">
-    </iframe>
-  </div>
-</section>
-          </section>
+
+    <section class="support">
+        <h2>Palaikyk per Ko-fi</h2>
+
+        <div class="kofi-button">
+            <script
+                type="text/javascript"
+                src="https://storage.ko-fi.com/cdn/widget/Widget_2.js">
+            </script>
+
+            <script type="text/javascript">
+                kofiwidget2.init(
+                    'Palikyk per Ko-fi',
+                    '#000000',
+                    'J1F627LL77'
+                );
+
+                kofiwidget2.draw();
+            </script>
+        </div>
+
+        <div class="kofi-embed-wrapper">
+            <iframe
+                id="kofiframe"
+                src="https://ko-fi.com/petrasbudrys/?hidefeed=true&widget=true&embed=true&preview=true"
+                title="petrasbudrys"
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
 </main>
+
+
 <!-- Shared Footer Placeholder -->
-  <div id="footer-placeholder"></div>
-  <script src="script.js"></script>
-</body>
-</html>
-</body>
-</html>
+<div id="footer-placeholder"></div>
+
+<script src="script.js"></script>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('site-header').innerHTML = data;
+        });
+</script>
+
+</body> </html>
