@@ -14,12 +14,10 @@ body {
     line-height: 1.6;
 }
 
-
-/* HEADER (FIXED: max-width aligned to 1100px) */
+/* HEADER */
 
 header,
-#site-header,
-.site-header {
+#site-header {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -51,11 +49,13 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* MAIN CONTENT */
 
-/* MAIN & CONTAINERS */
-
-main,
-
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
 
 h1 {
     font-size: 42px;
@@ -66,12 +66,11 @@ h2 {
     font-size: 28px;
 }
 
-
-/* LANDING */
+/* LANDING PAGE */
 
 .intro {
     max-width: 650px;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 
 .intro h1 {
@@ -85,43 +84,23 @@ h2 {
 .newsletter,
 .support {
     max-width: 600px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
+/* KO-FI EMBED */
 
-/* NEWSLETTER */
-
-.newsletter-form {
-    display: flex;
-    gap: 10px;
-    margin: 25px 0 10px;
+.kofi-embed-wrapper {
+    margin-top: 25px;
+    width: 100%;
 }
 
-.newsletter-form input {
-    flex: 1;
-    padding: 13px;
-    border: 1px solid #cccccc;
-    font-size: 16px;
-}
-
-button,
-.button {
-    display: inline-block;
-    padding: 13px 22px;
-    background: #111111;
-    color: white;
+.kofi-embed-wrapper iframe {
+    display: block;
+    width: 100%;
     border: none;
-    text-decoration: none;
-    cursor: pointer;
 }
 
-button:hover,
-.button:hover {
-    background: #444444;
-}
-
-
-/* COMICS */
+/* COMICS PAGE */
 
 .comic {
     margin-bottom: 120px;
@@ -159,11 +138,10 @@ button:hover,
     display: block;
 }
 
-
-/* ARTWORK / KŪRYBA */
+/* ARTWORK PAGE */
 
 .work-section {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .section-title {
@@ -174,28 +152,24 @@ button:hover,
     padding-bottom: 8px;
 }
 
-.image-grid,
-.artwork-grid {
+.image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
-.image-grid img,
-.artwork-thumbnail {
+.image-grid img {
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
     border-radius: 4px;
-    cursor: pointer;
     transition: opacity 0.2s;
 }
 
-.artwork-thumbnail:hover {
-    opacity: 0.8;
+.image-grid img:hover {
+    opacity: 0.85;
 }
-
 
 /* FOOTER */
 
@@ -206,14 +180,12 @@ footer {
     color: #777777;
 }
 
-
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 700px) {
 
     header,
-    #site-header,
-    .site-header {
+    #site-header {
         padding: 20px;
         flex-direction: column;
         gap: 15px;
@@ -224,14 +196,13 @@ footer {
         gap: 15px;
     }
 
-    main,
-    .content-container {
-        padding: 40px 20px;
+    main {
+        padding: 30px 20px;
     }
 
     h1 {
         font-size: 34px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .comic-intro {
@@ -243,14 +214,9 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .image-grid,
-    .artwork-grid {
+    .image-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 12px;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
     }
 
 }
