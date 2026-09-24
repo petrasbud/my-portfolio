@@ -234,36 +234,44 @@ display: block;
 ARTWORK PAGE
 ================================================== */
 
+/* ==================================================
+   ARTWORK PAGE
+================================================== */
+
 .work-section {
-margin-bottom: 80px;
+    width: 100%;
+    margin: 0 0 80px;
 }
 
 .section-title {
-font-size: 1.5rem;
-font-weight: 600;
-margin: 0 0 25px;
-padding-bottom: 10px;
-border-bottom: 1px solid #eeeeee;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .image-grid {
-display: grid;
-grid-template-columns: repeat(3, minmax(0, 1fr));
-gap: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
 }
 
 .image-grid img {
-width: 100%;
-height: auto;
-display: block;
-object-fit: cover;
-border-radius: 4px;
-transition: opacity 0.2s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
 }
 
 .image-grid img:hover {
-opacity: 0.85;
+    opacity: 0.85;
 }
+
 
 /* ==================================================
 FOOTER
