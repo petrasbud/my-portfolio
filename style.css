@@ -1,222 +1,420 @@
-* {
-    box-sizing: border-box;
+/* ==================================================
+GLOBAL RESET
+================================================== */
+
+{
+box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    background: #ffffff;
-    color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+margin: 0;
+padding: 0;
+background: #ffffff;
+color: #111111;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
 }
 
-/* HEADER */
+img {
+max-width: 100%;
+}
+
+/* ==================================================
+SHARED PAGE WIDTH
+================================================== */
+
+header,
+#site-header,
+main,
+footer {
+width: min(1100px, calc(100% - 60px));
+margin-left: auto;
+margin-right: auto;
+}
+
+/* ==================================================
+HEADER
+================================================== */
 
 header,
 #site-header {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 25px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+min-height: 80px;
+padding: 25px 0;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
 }
 
 .logo {
-    color: #111111;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+color: #111111;
+text-decoration: none;
+font-weight: bold;
+font-size: 1.2rem;
 }
 
 nav {
-    display: flex;
-    gap: 25px;
-    align-items: center;
+display: flex;
+align-items: center;
+gap: 25px;
 }
 
 nav a {
-    color: #111111;
-    text-decoration: none;
+color: #111111;
+text-decoration: none;
 }
 
 nav a:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
-/* MAIN CONTENT */
+/* ==================================================
+MAIN CONTENT
+================================================== */
 
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 30px;
+padding-top: 60px;
+padding-bottom: 80px;
+}
+
+/* ==================================================
+TYPOGRAPHY
+================================================== */
+
+h1,
+h2,
+h3 {
+line-height: 1.2;
 }
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 40px;
+font-size: 42px;
+margin-top: 0;
+margin-bottom: 30px;
 }
 
 h2 {
-    font-size: 28px;
+font-size: 28px;
+margin-top: 0;
 }
 
-/* LANDING PAGE */
+p {
+margin-top: 0;
+}
+
+/* ==================================================
+LANDING PAGE
+================================================== */
 
 .intro {
-    max-width: 650px;
-    margin-bottom: 80px;
+max-width: 700px;
+margin-bottom: 100px;
 }
 
 .intro h1 {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .intro p {
-    font-size: 20px;
+font-size: 20px;
+margin-bottom: 15px;
 }
 
-.newsletter,
+.intro p:last-child {
+margin-bottom: 0;
+}
+
+.intro a {
+color: inherit;
+}
+
+/* ==================================================
+NEWSLETTER
+================================================== */
+
+.newsletter {
+width: 100%;
+max-width: 650px;
+margin-bottom: 100px;
+}
+
+.newsletter h2 {
+margin-bottom: 15px;
+}
+
+.newsletter p {
+margin-bottom: 25px;
+}
+
+/* ==================================================
+SUPPORT / KO-FI
+================================================== */
+
 .support {
-    max-width: 600px;
-    margin-bottom: 80px;
+width: 100%;
+max-width: 650px;
+margin-bottom: 80px;
 }
 
-/* KO-FI EMBED */
+.support h2 {
+margin-bottom: 25px;
+}
+
+.kofi-button {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+margin-bottom: 25px;
+}
 
 .kofi-embed-wrapper {
-    margin-top: 25px;
-    width: 100%;
+width: 100%;
+margin-top: 25px;
+overflow: hidden;
 }
 
 .kofi-embed-wrapper iframe {
-    display: block;
-    width: 100%;
-    border: none;
+display: block;
+width: 100%;
+height: 712px;
+border: none;
 }
 
-/* COMICS PAGE */
+/* ==================================================
+COMICS PAGE
+================================================== */
 
 .comic {
-    margin-bottom: 120px;
+margin-bottom: 120px;
 }
 
 .comic-intro {
-    display: grid;
-    grid-template-columns: minmax(250px, 450px) 1fr;
-    gap: 60px;
-    align-items: start;
-    margin-bottom: 60px;
+display: grid;
+grid-template-columns: minmax(250px, 450px) minmax(0, 1fr);
+gap: 60px;
+align-items: start;
+margin-bottom: 60px;
 }
 
 .comic-cover {
-    width: 100%;
-    display: block;
+width: 100%;
+height: auto;
+display: block;
 }
 
 .comic-info {
-    padding-top: 10px;
+padding-top: 10px;
+min-width: 0;
 }
 
 .comic-info h2 {
-    margin-top: 0;
+margin-top: 0;
+margin-bottom: 15px;
 }
 
 .comic-pages {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 25px;
 }
 
 .comic-pages img {
-    width: 100%;
-    display: block;
+width: 100%;
+height: auto;
+display: block;
 }
 
-/* ARTWORK PAGE */
+/* ==================================================
+ARTWORK PAGE
+================================================== */
 
 .work-section {
-    margin-bottom: 60px;
+margin-bottom: 80px;
 }
 
 .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
+font-size: 1.5rem;
+font-weight: 600;
+margin: 0 0 25px;
+padding-bottom: 10px;
+border-bottom: 1px solid #eeeeee;
 }
 
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 25px;
 }
 
 .image-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 4px;
-    transition: opacity 0.2s;
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+border-radius: 4px;
+transition: opacity 0.2s ease;
 }
 
 .image-grid img:hover {
-    opacity: 0.85;
+opacity: 0.85;
 }
 
-/* FOOTER */
+/* ==================================================
+FOOTER
+================================================== */
 
 footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 30px;
-    color: #777777;
+padding-top: 40px;
+padding-bottom: 40px;
+color: #777777;
 }
 
-/* MOBILE RESPONSIVE */
+/* ==================================================
+TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+header,
+#site-header,
+main,
+footer {
+    width: min(100% - 40px, 700px);
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.comic-intro {
+    grid-template-columns: minmax(220px, 350px) minmax(0, 1fr);
+    gap: 40px;
+}
+
+.image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+}
+
+/* ==================================================
+MOBILE
+================================================== */
 
 @media (max-width: 700px) {
 
-    header,
-    #site-header {
-        padding: 20px;
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
-    }
+header,
+#site-header {
+    width: calc(100% - 30px);
+    min-height: auto;
+    padding: 20px 0;
 
-    nav {
-        gap: 15px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
 
-    main {
-        padding: 30px 20px;
-    }
+nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
 
-    h1 {
-        font-size: 34px;
-        margin-bottom: 30px;
-    }
+main {
+    width: calc(100% - 30px);
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
 
-    .comic-intro {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+footer {
+    width: calc(100% - 30px);
+}
 
-    .comic-pages {
-        grid-template-columns: 1fr;
-    }
+h1 {
+    font-size: 34px;
+    margin-bottom: 25px;
+}
 
-    .image-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 12px;
-    }
+h2 {
+    font-size: 25px;
+}
+
+.intro {
+    margin-bottom: 70px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+.newsletter {
+    margin-bottom: 70px;
+}
+
+.support {
+    margin-bottom: 50px;
+}
+
+.comic-intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.comic-cover {
+    max-width: 500px;
+}
+
+.comic-pages {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+}
+
+/* ==================================================
+SMALL PHONES
+================================================== */
+
+@media (max-width: 450px) {
+
+header,
+#site-header,
+main,
+footer {
+    width: calc(100% - 24px);
+}
+
+nav {
+    gap: 8px 15px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.image-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.kofi-embed-wrapper iframe {
+    height: 650px;
+}
+
 
 }
