@@ -191,10 +191,12 @@ COMICS PAGE
 ================================================== */
 /* COMICS */
 
+/* COMICS */
+
 .comic {
-    margin-bottom: 80px; /* Spacing between each comic project */
+    margin-bottom: 80px;
     padding-bottom: 60px;
-    border-bottom: 1px solid #eeeeee; /* Clean separator line */
+    border-bottom: 1px solid #eeeeee;
 }
 
 .comic:last-child {
@@ -209,9 +211,9 @@ COMICS PAGE
     margin-bottom: 30px;
 }
 
-/* Made comic cover smaller */
+/* Kept cover at 220px */
 .comic-cover {
-    width: 220px; /* Reduced from taking full width */
+    width: 220px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -229,24 +231,36 @@ COMICS PAGE
 }
 
 .comic h3 {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     margin-bottom: 15px;
     color: #666666;
 }
 
-/* Made sample spread pages smaller */
+/* Sample pages set to 70% of cover size (~154px) */
 .comic-pages {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller grid columns */
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .comic-pages img {
-    width: 100%;
-    max-width: 320px; /* Prevents spreads from blowing up large */
+    width: 154px; /* Exactly 70% of 220px cover */
+    max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
+    border-radius: 3px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .comic-intro {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .comic-pages img {
+        width: 130px;
+    }
 }
 
 /* ==================================================
