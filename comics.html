@@ -3,184 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Komiksai</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-  
-    <body>
+<body>
 
-        
 <header>
- <div id="site-header"></div>
-
-<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('site-header').innerHTML = data);
-</script>
+  <div id="site-header"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('site-header').innerHTML = data);
+  </script>
 </header>
 
-
-
 <main>
-
     <h1>Komiksai</h1>
 
-
-    <!-- COMIC -->
-
+    <!-- COMIC 1 -->
     <section class="comic">
-
         <div class="comic-intro">
-
             <img
                 src="images/comic-1-cover.jpg"
                 alt="Cover of Comic Title"
                 class="comic-cover"
             >
-
             <div class="comic-info">
-
                 <h2>436 metrai</h2>
-
                 <p>2026</p>
-
                 <p>24+4 psl.</p>
-
-                <p>
-                    Labai trumpas grafinis fantastinis apsakymas
-                </p>
-
+                <p>Labai trumpas grafinis fantastinis apsakymas</p>
             </div>
-
         </div>
-
 
         <h3>Atvartai</h3>
 
         <div class="comic-pages">
-
-            <img
-                src="images/comic-1-page-01.jpg"
-                alt="Comic sample page 1"
-            >
-
-            <img
-                src="images/comic-1-page-02.jpg"
-                alt="Comic sample page 2"
-            >
-
-            <img
-                src="images/comic-1-page-03.jpg"
-                alt="Comic sample page 3"
-            >
-
-
+            <img src="images/comic-1-page-01.jpg" alt="Comic sample page 1">
+            <img src="images/comic-1-page-02.jpg" alt="Comic sample page 2">
+            <img src="images/comic-1-page-03.jpg" alt="Comic sample page 3">
         </div>
-
     </section>
-  <div class="comic-intro">
 
+    <!-- COMIC 2 -->
+    <section class="comic">
+        <div class="comic-intro">
             <img
                 src="images/comic-2-cover.jpg"
                 alt="Cover of Comic Title"
                 class="comic-cover"
             >
-
             <div class="comic-info">
-
                 <h2>Šiluma kaulų nelaužo</h2>
-
                 <p>2026</p>
-
                 <p>32+4 psl.</p>
-
-                <p>
-                    Trys labai trumpi fantastiški grafiniai apsakymai
-                </p>
-
+                <p>Trys labai trumpi fantastiški grafiniai apsakymai</p>
             </div>
-
         </div>
-
 
         <h3>Atvartai</h3>
 
         <div class="comic-pages">
-
-            <img
-                src="images/comic-2-page-01.jpg"
-                alt="Comic sample page 1"
-            >
-
-            <img
-                src="images/comic-2-page-02.jpg"
-                alt="Comic sample page 2"
-            >
-
-            <img
-                src="images/comic-2-page-03.jpg"
-                alt="Comic sample page 3"
-            >
-
-           
-
+            <img src="images/comic-2-page-01.jpg" alt="Comic sample page 1">
+            <img src="images/comic-2-page-02.jpg" alt="Comic sample page 2">
+            <img src="images/comic-2-page-03.jpg" alt="Comic sample page 3">
         </div>
-  </section>
-  <div class="comic-intro">
+    </section>
 
+    <!-- COMIC 3 -->
+    <section class="comic">
+        <div class="comic-intro">
             <img
                 src="images/comic-3-cover.jpg"
                 alt="Cover of Comic Title"
                 class="comic-cover"
             >
-
             <div class="comic-info">
-
                 <h2>Tikras lietuviškas komiksas</h2>
-
                 <p>2026</p>
-
                 <p>20+4 psl.</p>
-
-                <p>
-                   Labai trumpa poetinė apybraiža
-                </p>
-
+                <p>Labai trumpa poetinė apybraiža</p>
             </div>
-
         </div>
-
 
         <h3>Atvartai</h3>
 
         <div class="comic-pages">
-
-            <img
-                src="images/comic-3-page-01.jpg"
-                alt="Comic sample page 1"
-            >
-
-            <img
-                src="images/comic-3-page-02.jpg"
-                alt="Comic sample page 2"
-            >
-
-
+            <img src="images/comic-3-page-01.jpg" alt="Comic sample page 1">
+            <img src="images/comic-3-page-02.jpg" alt="Comic sample page 2">
         </div>
-
-    <!-- ADD MORE COMICS HERE LATER -->
+    </section>
 
 </main>
 
 <!-- Shared Footer Placeholder -->
-  <div id="footer-placeholder"></div>
+<div id="footer-placeholder"></div>
 
-  <script src="script.js"></script>
-</body>
-</html>
-
+<script src="script.js"></script>
 </body>
 </html>
